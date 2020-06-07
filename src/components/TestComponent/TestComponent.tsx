@@ -4,7 +4,7 @@ export interface ITestComponent {
   message?: string
 }
 
-const TestComponent: React.FC<ITestComponent> = props => {
+const TestComponent = (props: ITestComponent & React.HTMLProps<HTMLDivElement>) => {
   return (
     <div>
       {props.message || 'Test Component'}

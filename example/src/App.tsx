@@ -4,8 +4,8 @@ import { TestComponent } from 'react-lib-component'
 const App = () => {
   return (
     <div>
-      Test Component
-      <TestComponent/>
+      Testing Components :
+      <TestComponent message="What the message appear in here ?"/>
     </div>
   )
 }
