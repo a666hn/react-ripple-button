@@ -1,11 +1,11 @@
 import React from 'react'
-import { TestComponent } from 'react-lib-component'
+import { Button } from 'react-ripple-button'
 
 const App = () => {
   return (
     <div>
       Testing Components :
-      <TestComponent message="What the message appear in here ?"/>
+      <Button/>
     </div>
   )
 }

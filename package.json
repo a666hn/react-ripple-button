@@ -1,5 +1,5 @@
 {
-  "name": "react-lib-boilerplate",
+  "name": "react-ripple-button",
   "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.cjs.js",
@@ -9,8 +9,12 @@
     "email": "adidot78@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/skinnyguy/react-lib-boilerplate",
+    "url": "https://github.com/skinnyguy/react-ripple-button",
     "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/skinnyguy/react-ripple-button/issues",
+    "email": "adidot78@gmail.com"
   },
   "types": "dist/index.d.ts",
   "engines": {
@@ -18,11 +22,14 @@
   },
   "peerDependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@types/node-sass": "^4.11.1",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
     "concurrently": "^5.2.0",
@@ -32,18 +39,20 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "install-peers-cli": "^2.2.0",
+    "node-sass": "^4.14.1",
     "prepend-file": "^1.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.13.1",
     "rollup-plugin-typescript2": "^0.27.1",
+    "styled-components": "^5.1.1",
     "ts-node": "^8.8.1",
     "tslib": "^1.11.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "build": "rollup -c",
-    "build:watch": "rollup -c -w",
+    "build": "rm -rf dist rollup -c",
+    "build:watch": "rm -rf dist && rollup -c -w",
     "prepublishOnly": "npm run build",
     "preinstall": "npx check-engine",
     "prerestart": "npx check-engine",

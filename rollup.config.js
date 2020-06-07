@@ -15,7 +15,7 @@ export default [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'esm' },
       {
-        file: 'example/src/react-lib-component/index.js',
+        file: 'example/src/react-ripple-button/index.js',
         format: 'es',
         banner: '/* eslint-disable */',
       },
