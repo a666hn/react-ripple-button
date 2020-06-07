@@ -1,0 +1,44 @@
+@keyframes ripple-animated {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.btn {
+  outline: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+
+  padding: 7px 12px;
+  background-color: maroon;
+
+  &.btn-radius {
+    border-radius: 3px;
+  }
+
+  .btn-label {
+    font-weight: 500;
+  }
+
+  .ripple-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .in-ripple-animated {
+      border-radius: 100%;
+      transform: scale(0);
+      opacity: .65;
+
+      position: absolute;
+      background-color: #ffffff;
+
+      animation-name: ripple-animated;
+      animation-duration: 750ms;
+    }
+  }
+}

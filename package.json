@@ -21,19 +21,25 @@
     "node": "12.16.2"
   },
   "peerDependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@rollup/plugin-babel": "^5.0.3",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@types/classnames": "^2.2.10",
     "@types/node-sass": "^4.11.1",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
+    "classnames": "^2.2.6",
     "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-flowtype": "^5.1.3",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
@@ -44,7 +50,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rollup": "^2.13.1",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-uglify": "^6.0.4",
     "ts-node": "^8.8.1",
     "tslib": "^1.11.1",
     "typescript": "~3.7.2"
@@ -60,7 +71,7 @@
     "start:example": "cd example && npm start",
     "deploy:example": "cd example && npm run deploy",
     "pretest": "npm run build",
-    "test": "npm run test:lint && npm run test:unit",
+    "test": "npm run test:lint",
     "test:unit": "test-node test/test.ts",
     "test:lint": "eslint ./src/**/*.ts ./src/**/*.tsx ./example/src/**/*.ts ./example/src/**/*.tsx",
     "test:lint:fix": "npm run test:lint -- --fix"

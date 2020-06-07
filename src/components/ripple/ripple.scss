@@ -1,0 +1,26 @@
+@keyframes ripple-animated {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.ripple-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .in-ripple-animated {
+    border-radius: 100%;
+    transform: scale(0);
+    opacity: .65;
+
+    position: absolute;
+    background-color: #ffffff;
+
+    animation-name: ripple-animated;
+    animation-duration: 750ms;
+  }
+}

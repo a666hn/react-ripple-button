@@ -1,11 +1,50 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.component-test-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.component-test-wrapper>.component-test-box {
+  margin-top: -240px;
+
+  display: inline-flex;
+  flex-flow: column wrap;
+  height: auto;
+
+  border-radius: 4px;
+  box-shadow: 0 0 26px rgba(42, 42, 42, .08);
+  padding: 0 12px;
+}
+
+.component-test-box>.component-test-header {
+  color: rgba(42, 42, 42, .65);
+}
+
+.component-test-box>.component-test-header>.header-title {
+  font-weight: 400;
+}
+
+.component-test-box>.component-test-body {
+  padding: 12px 0;
+}
+
+.component-test-box>.component-test-footer {
+  margin-top: 12px;
+  text-align: center;
+  padding: 7px;
 }
