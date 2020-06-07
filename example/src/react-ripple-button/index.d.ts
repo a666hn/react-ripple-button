@@ -1,2 +1,3 @@
 import Button from './components/button/button';
-export { Button };
+import ButtonIcon from './components/button-icon/button-icon';
+export { Button, ButtonIcon };

@@ -27,8 +27,21 @@ var __assign = function() {
     return __assign.apply(this, arguments);
 };
 
+function declareNewProps(allowedProps, currentProps) {
+    var newProps = {};
+    for (var item in currentProps) {
+        if (allowedProps.indexOf(item) < 0)
+            newProps[item] = currentProps[item];
+    }
+    return newProps;
+}
+
 var Button = function (props) {
-    return React.createElement("button", __assign({}, props), "Button");
+    var customProps = ['label', 'withRadius', 'block']; // eslint-disable-line
+    var newProps = declareNewProps(customProps, props);
+    return React.createElement("button", __assign({}, newProps), props.label || props.children);
 };
 
-export { Button };
+var ButtonIcon = function () { return React.createElement("div", null, "Button Icon"); };
+
+export { Button, ButtonIcon };
